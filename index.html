@@ -12,9 +12,9 @@
         :root {
             --primary: #4f46e5;
             --secondary: #6366f1;
-            --bg: #f9fafb;
+            --bg: #f3f4f6;
             --card: #ffffff;
-            --text: #1f2933;
+            --text: #1f2937;
         }
 
         * {
@@ -27,36 +27,38 @@
             font-family: 'Poppins', sans-serif;
             background: var(--bg);
             color: var(--text);
+            line-height: 1.7;
         }
 
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 60px 20px;
             text-align: center;
+            padding: 70px 20px;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
         }
 
         header p {
+            font-size: 1.1rem;
             opacity: 0.9;
         }
 
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: -40px auto 40px;
             padding: 20px;
         }
 
         .card {
             background: var(--card);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: 0.3s;
         }
 
@@ -65,28 +67,51 @@
         }
 
         h2 {
-            margin-bottom: 10px;
             color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         ul {
-            padding-left: 20px;
-            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             color: #6b7280;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .card {
+                padding: 20px;
             }
         }
     </style>
@@ -95,74 +120,138 @@
 
 <header>
     <h1>AI-Redovisning</h1>
-    <p>LearnClash – Lärande genom spel</p>
+    <p>LearnClash – Ett AI-baserat lärverktyg</p>
 </header>
 
 <main>
 
 <div class="card">
     <h2>Verktyget</h2>
-    <p><strong>LearnClash</strong></p>
-    <p>En AI-baserad lärplattform som kombinerar quiz och spel för att göra lärande mer engagerande.</p>
-</div>
 
-<div class="card">
-    <h2>Allmän beskrivning</h2>
     <p>
-        LearnClash är en digital lärandeplattform där användare tränar sina kunskaper genom quiz-dueller mot andra spelare.
-        Verktyget använder AI för att skapa frågor inom olika ämnen och gör lärandet mer motiverande genom spelifiering.
+        LearnClash är en digital lärplattform där användare tränar sina kunskaper genom quiz-dueller mot andra spelare.
+        Verktyget använder artificiell intelligens för att skapa frågor inom olika ämnen och göra lärandet mer engagerande.
+    </p>
+
+    <p>
+        Plattformen fokuserar på spelifiering, vilket innebär att man använder spelmekanismer för att öka motivationen hos användaren.
+        Genom poängsystem, ranking och tävling blir inlärningen både roligare och mer interaktiv.
     </p>
 </div>
 
 <div class="card">
-    <h2>Vad används det till?</h2>
+    <h2>Vad används LearnClash till?</h2>
+
+    <p>
+        LearnClash används för att träna och repetera kunskap inom olika ämnen, exempelvis:
+    </p>
+
     <ul>
-        <li>Plugga inför prov</li>
-        <li>Träna språk som engelska</li>
-        <li>Utveckla allmänbildning</li>
+        <li>Språk och engelska</li>
+        <li>Historia och samhällskunskap</li>
+        <li>Sport och allmänbildning</li>
+        <li>Provförberedelser</li>
     </ul>
+
     <p>
-        Fördelen är att lärandet blir roligare genom tävling och direkt feedback.
+        AI-tekniken gör att frågor kan skapas automatiskt beroende på vilket ämne användaren väljer.
+        Det gör verktyget flexibelt och användbart för många olika målgrupper.
+    </p>
+
+    <p>
+        Verktyget passar både elever, lärare och personer som vill lära sig nya saker på egen hand.
+        Lärare kan använda det som ett komplement i undervisningen medan elever kan använda det för att plugga på ett roligare sätt.
     </p>
 </div>
 
 <div class="card">
-    <h2>Use case (Användning)</h2>
+    <h2>Användning av verktyget – Use Case</h2>
+
     <p>
-        Användaren börjar med att skapa ett konto och logga in. Därefter väljer man ett ämne, till exempel engelska eller historia.
-        Systemet genererar frågor med hjälp av AI och man spelar quiz-dueller mot andra spelare.
+        För att börja använda LearnClash behöver användaren först skapa ett konto eller logga in i appen.
+        Därefter väljer man ett ämne som man vill träna på.
     </p>
+
     <p>
-        Efter varje match visas resultatet och ens ranking uppdateras. Felaktiga svar återkommer senare,
-        vilket gör att man lär sig av sina misstag.
+        När ämnet är valt genererar AI automatiskt frågor. Sedan startar en quiz-duell mot en annan spelare.
+        Båda deltagarna svarar på frågor i flera omgångar och får poäng beroende på hur många rätt de svarar.
+    </p>
+
+    <p>
+        Efter matchen visas resultatet och spelarens ranking uppdateras genom ett Elo-system.
+        Felaktiga svar kommer tillbaka senare för repetition, vilket hjälper användaren att lära sig av sina misstag.
+    </p>
+
+    <p>
+        Jag testade verktyget genom att välja ett ämne och spela flera quizmatcher.
+        Först testade jag olika funktioner för att förstå hur systemet fungerade.
+        Därefter genomförde jag en hel användning från start till slut där jag valde ämne, spelade matcher och analyserade resultaten.
     </p>
 </div>
 
 <div class="card">
-    <h2>Slutlig analys</h2>
+    <h2>Fördelar och nackdelar</h2>
 
     <p><strong>Fördelar:</strong></p>
+
     <ul>
-        <li>Motiverande och roligt sätt att lära sig</li>
-        <li>AI-genererade frågor</li>
-        <li>Effektiv repetition av kunskap</li>
+        <li>Lärandet blir roligare och mer motiverande</li>
+        <li>AI-genererade frågor gör innehållet varierat</li>
+        <li>Direkt feedback hjälper användaren att utvecklas</li>
+        <li>Repetition av fel svar förbättrar minnet</li>
+        <li>Rankingsystem gör att användaren kan följa sin utveckling</li>
     </ul>
 
     <p><strong>Nackdelar:</strong></p>
+
     <ul>
-        <li>Vissa funktioner kan kosta pengar</li>
-        <li>Fokus kan bli mer på spel än lärande</li>
+        <li>Vissa funktioner kan kräva betalning</li>
+        <li>Det kan bli mer fokus på tävling än lärande</li>
+        <li>AI-genererade frågor kan ibland vara ojämna i kvalitet</li>
     </ul>
+</div>
+
+<div class="card">
+    <h2>Min slutliga analys</h2>
 
     <p>
-        Sammanfattningsvis är LearnClash ett modernt och effektivt verktyg som gör studier mer engagerande.
+        Jag tycker att LearnClash är ett bra och modernt AI-verktyg eftersom det kombinerar lärande och spel på ett effektivt sätt.
+        Det gör studier mer intressanta och hjälper användaren att hålla motivationen uppe längre.
     </p>
+
+    <p>
+        Det bästa med verktyget är att man lär sig genom aktivitet istället för att bara läsa teori.
+        Jag tycker också att rankingsystemet och quiz-duellerna gör att man vill fortsätta utvecklas.
+    </p>
+
+    <p>
+        Samtidigt finns det vissa nackdelar. Eftersom fokus ligger mycket på tävling kan vissa användare bli mer fokuserade på att vinna än att faktiskt lära sig.
+        Vissa funktioner kan även kosta pengar beroende på vilken version av appen man använder.
+    </p>
+
+    <p>
+        Sammanfattningsvis tycker jag att LearnClash är ett effektivt och engagerande AI-verktyg som passar särskilt bra för elever och personer som vill göra lärandet roligare.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Bilder från LearnClash</h2>
+
+    <p>
+        Nedan visas bilder från verktyget och hur appen fungerar i praktiken.
+    </p>
+
+    <div class="gallery">
+        <img src="images/bild1.jpg" alt="LearnClash bild 1">
+        <img src="images/bild2.jpg" alt="LearnClash bild 2">
+        <img src="images/bild3.jpg" alt="LearnClash bild 3">
+    </div>
 </div>
 
 </main>
 
 <footer>
-    <p>Publicerad via GitHub Pages • Inlämning via Vklass</p>
+    <p>Publicerad via GitHub Pages • AI-Redovisning om LearnClash</p>
 </footer>
 
 </body>
